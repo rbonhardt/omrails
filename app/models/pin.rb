@@ -4,5 +4,8 @@ class Pin < ActiveRecord::Base
   # presence: true makes sure there is something there
   # length can be used as well
   # find validations under rails validations
-  validates :description, presence: true 
+  validates :description, presence: true
+  
+  belongs_to :user
+  validates :user_id, presence: true 
 end
